@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Terms of Service — SeWalk AI</title>
+<meta name="description" content="SeWalk AI Terms of Service — rules and guidelines for using our platform."/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0800;
+    --surface: #110f00;
+    --border: rgba(201,168,76,0.13);
+    --text: #f5f0e8;
+    --muted: #7a7060;
+    --accent: #c9a84c;
+    --accent2: #e8c96a;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    background-image: radial-gradient(ellipse at 80% 0%, rgba(201,168,76,0.05) 0%, transparent 60%);
+  }
+  header {
+    padding: 24px 40px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(10,8,0,0.92);
+    backdrop-filter: blur(20px);
+    position: sticky; top: 0; z-index: 10;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; }
+  .logo span {
+    background: linear-gradient(90deg, #c9a84c 0%, #f5e17a 50%, #c9a84c 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; animation: shimmer 4s linear infinite;
+  }
+  @keyframes shimmer { to { background-position: 200% center; } }
+  .back-btn {
+    display: flex; align-items: center; gap: 6px;
+    color: var(--accent); font-size: 0.8rem; font-weight: 500;
+    text-decoration: none; border: 1px solid rgba(201,168,76,0.25);
+    padding: 7px 16px; border-radius: 99px;
+    transition: all 0.2s; background: rgba(201,168,76,0.08);
+  }
+  .back-btn:hover { background: rgba(201,168,76,0.15); }
+  .hero {
+    text-align: center;
+    padding: 80px 40px 60px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent);
+    background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2);
+    padding: 6px 16px; border-radius: 99px; margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800; letter-spacing: -1px;
+    margin-bottom: 16px; line-height: 1.1;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p { font-size: 1rem; color: var(--muted); max-width: 500px; margin: 0 auto 24px; line-height: 1.7; }
+  .hero-meta {
+    font-size: 0.75rem; color: var(--muted);
+    display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;
+  }
+  .content { max-width: 760px; margin: 0 auto; padding: 60px 40px 100px; }
+  .section { margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid var(--border); }
+  .section:last-child { border-bottom: none; }
+  .section-number { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .section h2 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 18px; }
+  .section p { font-size: 0.92rem; line-height: 1.8; color: #c8c0b0; margin-bottom: 14px; }
+  .section p:last-child { margin-bottom: 0; }
+  .section ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+  .section ul li { font-size: 0.92rem; line-height: 1.7; color: #c8c0b0; padding-left: 20px; position: relative; }
+  .section ul li::before { content: '✦'; position: absolute; left: 0; color: var(--accent); font-size: 0.6rem; top: 5px; }
+  .highlight-box { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.15); border-radius: 14px; padding: 20px 24px; margin: 20px 0; }
+  .highlight-box p { margin-bottom: 0; }
+  .warning-box { background: rgba(255,100,50,0.06); border: 1px solid rgba(255,100,50,0.15); border-radius: 14px; padding: 20px 24px; margin: 20px 0; }
+  .warning-box p { margin-bottom: 0; color: #c8c0b0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted); }
+  footer a { color: var(--accent); }
+  @media (max-width: 600px) {
+    header { padding: 18px 20px; }
+    .hero { padding: 50px 20px 40px; }
+    .content { padding: 40px 20px 80px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">SeWalk <span>AI</span></div>
+  <a href="https://sewalk-ai-0e0188.netlify.app" class="back-btn">← Back to App</a>
+</header>
+
+<div class="hero">
+  <div class="hero-badge">Legal Document</div>
+  <h1>Terms of <span>Service</span></h1>
+  <p>By using SeWalk AI, you agree to these terms. Please read them carefully.</p>
+  <div class="hero-meta">
+    <span>📅 Effective: March 4, 2026</span>
+    <span>📍 Governed by Indian Law</span>
+    <span>✦ SeWalk AI</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section">
+    <div class="section-number">01 — Agreement</div>
+    <h2>Acceptance of Terms</h2>
+    <p>These Terms of Service ("Terms") govern your use of SeWalk AI, operated by Soumyadip Bhatt ("we", "us", "our"), accessible at <a href="https://sewalk-ai-0e0188.netlify.app">https://sewalk-ai-0e0188.netlify.app</a>.</p>
+    <p>By accessing or using SeWalk AI, you confirm that you are at least 13 years old and agree to be bound by these Terms. If you do not agree, please do not use our service.</p>
+    <div class="highlight-box">
+      <p>💡 <strong style="color:#e8c96a;">Short version:</strong> Use SeWalk AI responsibly and legally. Don't misuse it. We reserve the right to suspend accounts that violate these terms.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">02 — The Service</div>
+    <h2>What SeWalk AI Provides</h2>
+    <p>SeWalk AI is an AI-powered multi-persona assistant platform that provides:</p>
+    <ul>
+      <li>AI chat with specialised personas including Gym Trainer, Librarian, Music Producer, JEE Tutor, and Companion</li>
+      <li>Session memory and chat history for registered users</li>
+      <li>Cognitive games and mental exercises via the Cognitive Hub</li>
+      <li>Guest access with limited free messages</li>
+    </ul>
+    <p>We reserve the right to modify, suspend, or discontinue any part of the service at any time without prior notice.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">03 — User Accounts</div>
+    <h2>Your Account</h2>
+    <p>You may use SeWalk AI as a guest (limited to 10 free messages) or create an account by signing in with Google. By creating an account you agree to:</p>
+    <ul>
+      <li>Provide accurate information during sign-in</li>
+      <li>Keep your account credentials secure</li>
+      <li>Be responsible for all activity that occurs under your account</li>
+      <li>Notify us immediately of any unauthorised use of your account</li>
+    </ul>
+    <p>We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">04 — Acceptable Use</div>
+    <h2>What You May Not Do</h2>
+    <p>You agree not to use SeWalk AI to:</p>
+    <ul>
+      <li>Generate harmful, illegal, abusive, threatening, or hateful content</li>
+      <li>Harass, bully, or intimidate other users or any individuals</li>
+      <li>Attempt to reverse engineer, hack, or exploit the platform</li>
+      <li>Use automated scripts or bots to access the service</li>
+      <li>Violate any applicable Indian or international laws</li>
+      <li>Impersonate any person, company, or entity</li>
+      <li>Generate spam, misinformation, or fraudulent content</li>
+    </ul>
+    <div class="warning-box">
+      <p>⚠️ <strong style="color:#ff8060;">Warning:</strong> Violations of these rules may result in immediate account suspension without notice and, in serious cases, may be reported to relevant authorities.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">05 — AI Limitations</div>
+    <h2>Understanding AI Responses</h2>
+    <p>SeWalk AI uses artificial intelligence to generate responses. You acknowledge that:</p>
+    <ul>
+      <li>AI responses may sometimes be inaccurate, incomplete, or outdated</li>
+      <li>SeWalk AI is not a substitute for professional medical, legal, financial, or psychological advice</li>
+      <li>The JEE Tutor mode provides general educational assistance — verify important information independently</li>
+      <li>The Gym Trainer mode provides general fitness guidance — consult a professional before starting any fitness programme</li>
+    </ul>
+    <p>Always use your own judgment when acting on information provided by SeWalk AI.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">06 — Intellectual Property</div>
+    <h2>Ownership</h2>
+    <p>SeWalk AI, including its design, code, branding, and content, is owned by Soumyadip Bhatt. All rights are reserved.</p>
+    <p>You retain ownership of the content you input into SeWalk AI. By using the service, you grant us a limited licence to process your inputs solely for the purpose of generating AI responses.</p>
+    <p>You may not copy, reproduce, distribute, or create derivative works from SeWalk AI without our express written permission.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">07 — Disclaimer</div>
+    <h2>No Warranties</h2>
+    <p>SeWalk AI is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that:</p>
+    <ul>
+      <li>The service will be uninterrupted, error-free, or secure</li>
+      <li>AI responses will be accurate, complete, or suitable for your purpose</li>
+      <li>Any defects or errors will be corrected</li>
+    </ul>
+    <p>Your use of SeWalk AI is entirely at your own risk.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">08 — Limitation of Liability</div>
+    <h2>Our Liability</h2>
+    <p>To the maximum extent permitted by Indian law, Soumyadip Bhatt and SeWalk AI shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service, including but not limited to loss of data, loss of profits, or personal injury.</p>
+    <p>Our total liability to you for any claim shall not exceed INR 0 (zero), as SeWalk AI is currently a free service.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">09 — Governing Law</div>
+    <h2>Jurisdiction</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of India, including the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023.</p>
+    <p>Any disputes arising from these Terms or your use of SeWalk AI shall be subject to the exclusive jurisdiction of the courts of India.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">10 — Contact</div>
+    <h2>Questions About These Terms</h2>
+    <p>If you have any questions about these Terms of Service, please contact:</p>
+    <div class="highlight-box">
+      <p><strong style="color:#e8c96a;">Soumyadip Bhatt</strong><br/>
+      Operator of SeWalk AI<br/>
+      India<br/>
+      📧 <a href="mailto:otedtalks@gmail.com">otedtalks@gmail.com</a><br/>
+      🌐 <a href="https://sewalk-ai-0e0188.netlify.app">sewalk-ai-0e0188.netlify.app</a></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 SeWalk AI · Operated by Soumyadip Bhatt · India</p>
+  <p style="margin-top:8px;">
+    <a href="https://sewalk-ai-0e0188.netlify.app">Home</a> ·
+    <a href="https://sewalk-ai-0e0188.netlify.app/privacy.html">Privacy Policy</a> ·
+    <a href="mailto:otedtalks@gmail.com">Contact</a>
+  </p>
+</footer>
+
+</body>
+</html> 

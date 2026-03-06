@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — SeWalk AI</title>
+<meta name="description" content="SeWalk AI Privacy Policy — how we collect, use and protect your data."/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0800;
+    --surface: #110f00;
+    --border: rgba(201,168,76,0.13);
+    --text: #f5f0e8;
+    --muted: #7a7060;
+    --accent: #c9a84c;
+    --accent2: #e8c96a;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    background-image: radial-gradient(ellipse at 20% 0%, rgba(201,168,76,0.05) 0%, transparent 60%);
+  }
+  header {
+    padding: 24px 40px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(10,8,0,0.92);
+    backdrop-filter: blur(20px);
+    position: sticky; top: 0; z-index: 10;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 1.2rem;
+  }
+  .logo span {
+    background: linear-gradient(90deg, #c9a84c 0%, #f5e17a 50%, #c9a84c 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+  @keyframes shimmer { to { background-position: 200% center; } }
+  .back-btn {
+    display: flex; align-items: center; gap: 6px;
+    color: var(--accent); font-size: 0.8rem; font-weight: 500;
+    text-decoration: none; border: 1px solid rgba(201,168,76,0.25);
+    padding: 7px 16px; border-radius: 99px;
+    transition: all 0.2s; background: rgba(201,168,76,0.08);
+  }
+  .back-btn:hover { background: rgba(201,168,76,0.15); }
+
+  .hero {
+    text-align: center;
+    padding: 80px 40px 60px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent);
+    background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2);
+    padding: 6px 16px; border-radius: 99px; margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800; letter-spacing: -1px;
+    margin-bottom: 16px; line-height: 1.1;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p {
+    font-size: 1rem; color: var(--muted);
+    max-width: 500px; margin: 0 auto 24px;
+    line-height: 1.7;
+  }
+  .hero-meta {
+    font-size: 0.75rem; color: var(--muted);
+    display: flex; align-items: center; justify-content: center; gap: 20px;
+    flex-wrap: wrap;
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+  .content {
+    max-width: 760px; margin: 0 auto;
+    padding: 60px 40px 100px;
+  }
+  .section {
+    margin-bottom: 52px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; }
+  .section-number {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .section h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem; font-weight: 700;
+    margin-bottom: 18px; color: var(--text);
+  }
+  .section p {
+    font-size: 0.92rem; line-height: 1.8;
+    color: #c8c0b0; margin-bottom: 14px;
+  }
+  .section p:last-child { margin-bottom: 0; }
+  .section ul {
+    list-style: none; padding: 0;
+    display: flex; flex-direction: column; gap: 10px;
+    margin-bottom: 14px;
+  }
+  .section ul li {
+    font-size: 0.92rem; line-height: 1.7;
+    color: #c8c0b0; padding-left: 20px; position: relative;
+  }
+  .section ul li::before {
+    content: '✦';
+    position: absolute; left: 0;
+    color: var(--accent); font-size: 0.6rem;
+    top: 5px;
+  }
+  .highlight-box {
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 14px; padding: 20px 24px;
+    margin: 20px 0;
+  }
+  .highlight-box p { margin-bottom: 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    padding: 32px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.75rem; color: var(--muted);
+  }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 600px) {
+    header { padding: 18px 20px; }
+    .hero { padding: 50px 20px 40px; }
+    .content { padding: 40px 20px 80px; }
+    footer { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">SeWalk <span>AI</span></div>
+  <a href="https://sewalk-ai-0e0188.netlify.app" class="back-btn">← Back to App</a>
+</header>
+
+<div class="hero">
+  <div class="hero-badge">Legal Document</div>
+  <h1>Privacy <span>Policy</span></h1>
+  <p>We believe privacy is a right, not a privilege. Here's exactly what we collect and why.</p>
+  <div class="hero-meta">
+    <span>📅 Effective: March 4, 2026</span>
+    <span>📍 Governed by Indian Law</span>
+    <span>✦ SeWalk AI</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section">
+    <div class="section-number">01 — Introduction</div>
+    <h2>Who We Are</h2>
+    <p>SeWalk AI ("we", "our", or "us") is an AI-powered multi-persona assistant platform operated by Soumyadip Bhatt, based in India. SeWalk AI is accessible at <a href="https://sewalk-ai-0e0188.netlify.app">https://sewalk-ai-0e0188.netlify.app</a>.</p>
+    <p>This Privacy Policy explains how we collect, use, and protect your personal information when you use our service. By using SeWalk AI, you agree to the practices described in this policy.</p>
+    <div class="highlight-box">
+      <p>💡 <strong style="color:#e8c96a;">Short version:</strong> We only collect your name and email when you sign in with Google. We do not sell your data to anyone. Ever.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">02 — Data Collection</div>
+    <h2>What We Collect</h2>
+    <p>We collect the minimum data necessary to provide our service. When you sign in with Google, we receive:</p>
+    <ul>
+      <li><strong style="color:#f5f0e8;">Your name</strong> — used to personalise your experience</li>
+      <li><strong style="color:#f5f0e8;">Your email address</strong> — used as your account identifier</li>
+      <li><strong style="color:#f5f0e8;">Your Google profile picture</strong> — displayed in the app interface</li>
+    </ul>
+    <p>We do <strong style="color:#f5f0e8;">not</strong> collect passwords, payment information, location data, device identifiers, or any sensitive personal information.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">03 — Chat Data</div>
+    <h2>Your Conversations</h2>
+    <p>Chat messages you send to SeWalk AI are processed by the Google Gemini API to generate responses. For signed-in users, chat sessions are stored in our database (Supabase) so you can access them later.</p>
+    <p>For guest users (not signed in), chat messages are stored only in your browser's local memory and are permanently deleted when you close the browser tab.</p>
+    <div class="highlight-box">
+      <p>⚠️ <strong style="color:#e8c96a;">Important:</strong> Do not share sensitive personal information, passwords, financial details, or confidential data in chat messages.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">04 — How We Use Data</div>
+    <h2>Why We Collect It</h2>
+    <p>We use your information only to:</p>
+    <ul>
+      <li>Create and manage your SeWalk AI account</li>
+      <li>Save and sync your chat sessions across devices</li>
+      <li>Display your name and avatar in the app interface</li>
+      <li>Send important service updates (not marketing emails)</li>
+    </ul>
+    <p>We do <strong style="color:#f5f0e8;">not</strong> use your data for advertising, profiling, or any commercial purpose beyond operating the service.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">05 — Third Party Services</div>
+    <h2>Services We Use</h2>
+    <p>SeWalk AI uses the following third-party services to operate:</p>
+    <ul>
+      <li><strong style="color:#f5f0e8;">Google Gemini API</strong> — processes your chat messages to generate AI responses. Subject to <a href="https://ai.google.dev/terms" target="_blank">Google's AI Terms</a>.</li>
+      <li><strong style="color:#f5f0e8;">Supabase</strong> — stores your account information and chat sessions securely. Subject to <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy</a>.</li>
+      <li><strong style="color:#f5f0e8;">Google OAuth</strong> — handles sign-in authentication. Subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+      <li><strong style="color:#f5f0e8;">Netlify</strong> — hosts our website and backend functions. Subject to <a href="https://www.netlify.com/privacy/" target="_blank">Netlify's Privacy Policy</a>.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">06 — Data Security</div>
+    <h2>How We Protect Your Data</h2>
+    <p>We take security seriously. Your data is protected by:</p>
+    <ul>
+      <li>HTTPS encryption on all data transmitted to and from our service</li>
+      <li>Supabase Row Level Security — only you can access your own data</li>
+      <li>API keys stored in secure server-side environment variables, never exposed to browsers</li>
+      <li>Google OAuth — we never see or store your Google password</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">07 — Your Rights</div>
+    <h2>Your Rights Under Indian IT Law</h2>
+    <p>Under the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (India), you have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Correct inaccurate personal data</li>
+      <li>Delete your account and all associated data</li>
+      <li>Withdraw consent for data processing at any time</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="/cdn-cgi/l/email-protection#640b1001001005080f17240309050d084a070b09"><span class="__cf_email__" data-cfemail="ea859e8f8e9e8b868199aa8d878b8386c4898587">[email&#160;protected]</span></a>. We will respond within 30 days.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">08 — Children</div>
+    <h2>Children's Privacy</h2>
+    <p>SeWalk AI is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately at <a href="/cdn-cgi/l/email-protection#cea1baabaabaafa2a5bd8ea9a3afa7a2e0ada1a3"><span class="__cf_email__" data-cfemail="610e15040515000d0a1221060c00080d4f020e0c">[email&#160;protected]</span></a>.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">09 — Changes</div>
+    <h2>Updates to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this page. Continued use of SeWalk AI after any changes constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">10 — Contact</div>
+    <h2>Get in Touch</h2>
+    <p>If you have any questions about this Privacy Policy or how we handle your data, please contact:</p>
+    <div class="highlight-box">
+      <p><strong style="color:#e8c96a;">Soumyadip Bhatt</strong><br/>
+      Operator of SeWalk AI<br/>
+      India<br/>
+      📧 <a href="/cdn-cgi/l/email-protection#fe918a9b9a8a9f92958dbe99939f9792d09d9193"><span class="__cf_email__" data-cfemail="80eff4e5e4f4e1ecebf3c0e7ede1e9ecaee3efed">[email&#160;protected]</span></a><br/>
+      🌐 <a href="https://sewal
