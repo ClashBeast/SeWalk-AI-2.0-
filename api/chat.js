@@ -10,7 +10,7 @@ const ALLOWED_ORIGINS = [
   'https://genuine-otter-85f43c.netlify.app',
   'http://localhost:3000',
   'http://localhost:8888',
-  // ADD YOUR ACTUAL VERCEL URL BELOW (e.g. 'https://official-sewalk-ai.vercel.app')
+  // ADD YOUR ACTUAL VERCEL URL BELOW (e.g. 'https://se-walk-ai-2-0.vercel.app/')
 ];
 
 export default async function handler(req, res) {
